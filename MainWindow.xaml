@@ -6,23 +6,42 @@
         xmlns:local="clr-namespace:PrototipoVentas"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="850">
-    <Grid>
+    <Grid Background="White">
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition/>
             
         </Grid.ColumnDefinitions>
         <!-- Parte derecha de la pantalla la vde -->
-        <Grid Grid.Column="1">
+        <Grid Grid.Column="1" Background="#E8F4F7">
             <Grid.RowDefinitions>
                 <RowDefinition Height="90"/>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="80"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-           
-             
+            <Label Grid.Row="1">Column1 row 1</Label>
+            <Label Grid.Row="0">Column1 row 0</Label>
+            <Label Grid.Row="2">Column1 row 2</Label>
+            <StackPanel Grid.Row="3">
+                
+                <Label Grid.Row="3">Column1 row 2</Label>
+            </StackPanel>
+
         </Grid>
-        <Label Grid.Column="1">HOLA</Label>
+
+        <Border BorderBrush="#314354" BorderThickness="0,0,2,0">
+            <Grid Background="#647687" >
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+            </Grid>
+        </Border>
+            
+        
     </Grid>
 </Window>
