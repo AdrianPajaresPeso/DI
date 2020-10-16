@@ -4,6 +4,20 @@
              xmlns:local="clr-namespace:PrototipoVentas"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        
+        
+        
+        
+        <Style x:Key="SelectOption" TargetType="Button">
+            <Setter Property="FontFamily" Value="Seoge UI"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Background" Value="LightGray"/>
+        </Style>
+        <Style x:Key="Title" TargetType="TextBlock">
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="FontFamily" Value="Seoge UI"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
     </Application.Resources>
 </Application>

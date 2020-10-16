@@ -8,5 +8,6 @@ namespace PrototipoVentas.Model
 {
     class Dependiente
     {
+
     }
 }

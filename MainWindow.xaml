@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:PrototipoVentas"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="850">
-    <Grid Background="White">
+
+    <Grid Background="#E8F4F7">
         
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -14,26 +15,206 @@
             
         </Grid.ColumnDefinitions>
         <!-- Parte derecha de la pantalla la vde -->
-        <Grid Grid.Column="1" Background="#E8F4F7">
+        <Grid Grid.Column="1" Margin="10,0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="90"/>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="80"/>
-                <RowDefinition/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+
             </Grid.RowDefinitions>
-            <Label Grid.Row="1">Column1 row 1</Label>
-            <Label Grid.Row="0">Column1 row 0</Label>
-            <Label Grid.Row="2">Column1 row 2</Label>
-            <StackPanel Grid.Row="3">
-                
-                <Label Grid.Row="3">Column1 row 2</Label>
+
+
+            <!--Titulo de la ventana-->
+            <StackPanel Grid.Row="0">
+
+                <TextBlock Style="{StaticResource Title}">Gestión de Artículos</TextBlock>
+
             </StackPanel>
 
-        </Grid>
+            <!--Elección de acciones-->
+            <Border Grid.Row="1" BorderBrush="Black" BorderThickness="0,1, 0, 1">
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Style="{StaticResource SelectOption}"  Grid.Column="1" Click="Button_Click" Margin="0,10">Listado de Artículos</Button>
+                    <Button Style="{StaticResource SelectOption}" Grid.Column="2" Click="Button_Click_1" Margin="0,10">Añadir Artículo</Button>
 
+                </Grid>
+
+            </Border>
+            
+            <!--Parte que cambia-->
+            <Grid Grid.Row="2" Visibility="Visible">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <FlowDocumentReader Grid.Row="1">
+                    <FlowDocument>
+
+                        <Table CellSpacing="4">
+
+                            <Table.Columns>
+                                <TableColumn/>
+                                <TableColumn/>
+                                <TableColumn/>
+                                <TableColumn/>
+                            </Table.Columns>
+
+                            <TableRowGroup>
+
+                                <!-- Header row for the table. -->
+                                <TableRow Background="LightGoldenrodYellow">
+                                    <TableCell>
+                                        <Paragraph FontSize="14pt" FontWeight="Bold">Planet</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph FontSize="14pt" FontWeight="Bold">Mean Distance from Sun</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph FontSize="14pt" FontWeight="Bold">Mean Diameter</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph FontSize="14pt" FontWeight="Bold">Approximate Mass</Paragraph>
+                                    </TableCell>
+                                </TableRow>
+
+                                <!-- Sub-title row for the inner planets. -->
+                                <TableRow>
+                                    <TableCell ColumnSpan="4">
+                                        <Paragraph FontSize="14pt" FontWeight="Bold">The Inner Planets</Paragraph>
+                                    </TableCell>
+                                </TableRow>
+
+                                <!-- Four data rows for the inner planets. -->
+                                <TableRow>
+                                    <TableCell>
+                                        <Paragraph>Mercury</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>57,910,000 km</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>4,880 km</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>3.30e23 kg</Paragraph>
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow Background="lightgray">
+                                    <TableCell>
+                                        <Paragraph>Venus</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>108,200,000 km</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>12,103.6 km</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>4.869e24 kg</Paragraph>
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell>
+                                        <Paragraph>Earth</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>149,600,000 km</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>12,756.3 km</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>5.972e24 kg</Paragraph>
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow Background="lightgray">
+                                    <TableCell>
+                                        <Paragraph>Mars</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>227,940,000 km</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>6,794 km</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>6.4219e23 kg</Paragraph>
+                                    </TableCell>
+                                </TableRow>
+
+                                <!-- Sub-title row for the outter planets. -->
+                                <TableRow>
+                                    <TableCell ColumnSpan="4">
+                                        <Paragraph FontSize="14pt" FontWeight="Bold">The Major Outer Planets</Paragraph>
+                                    </TableCell>
+                                </TableRow>
+
+                                <!-- Four data rows for the major outter planets. -->
+                                <TableRow>
+                                    <TableCell>
+                                        <Paragraph>Jupiter</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>778,330,000 km</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>142,984 km</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>1.900e27 kg</Paragraph>
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow Background="lightgray">
+                                    <TableCell>
+                                        <Paragraph>Saturn</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>1,429,400,000 km</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>120,536 km</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>5.68e26 kg</Paragraph>
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell>
+                                        <Paragraph>Uranus</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>2,870,990,000 km</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>51,118 km</Paragraph>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Paragraph>8.683e25 kg</Paragraph>
+                                    </TableCell>
+                                </TableRow>
+                                
+                              
+
+                            </TableRowGroup>
+                        </Table>
+                    </FlowDocument>
+                </FlowDocumentReader>
+
+
+            </Grid>
+
+        </Grid>
         <Border BorderBrush="#314354" BorderThickness="0,0,2,0">
             <Grid Background="#647687" >
                 <Grid.RowDefinitions>
+                    <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>

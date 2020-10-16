@@ -20,9 +20,21 @@ namespace PrototipoVentas
     /// </summary>
     public partial class MainWindow : Window
     {
+        Boolean aniadirOrListar;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            aniadirOrListar = true;
+            MessageBox.Show("You clicked me at ");
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
