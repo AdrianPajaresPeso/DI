@@ -40,172 +40,81 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="10"/>
                     </Grid.ColumnDefinitions>
-                    <Button Style="{StaticResource SelectOption}"  Grid.Column="1" Click="Button_Click" Margin="0,10">Listado de Artículos</Button>
-                    <Button Style="{StaticResource SelectOption}" Grid.Column="2" Click="Button_Click_1" Margin="0,10">Añadir Artículo</Button>
+                    <Button x:Name="btn_lista" Style="{StaticResource SelectOption}"  Grid.Column="1" Click="btn_listar" Margin="0,10">Listado de Artículos</Button>
+                    <Button x:Name="btn_addArticulo" Style="{StaticResource SelectOption}" Grid.Column="2" Click="btn_aniadir" Margin="0,10">Añadir Artículo</Button>
 
                 </Grid>
 
             </Border>
+            <Grid x:Name ="AddArticulo" Grid.Row="3" Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    
+                    
+                </Grid.RowDefinitions>
+            </Grid>
             
-            <!--Parte que cambia-->
-            <Grid Grid.Row="2" Visibility="Visible">
+            
+            
+            <!--Parte que cambia solo para listado-->
+            <Grid x:Name="listadoArticulos" Grid.Row="2" Visibility="Visible">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="75"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <FlowDocumentReader Grid.Row="1">
-                    <FlowDocument>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" Margin="0,0,0,45" Grid.RowSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <CheckBox x:Name="baja" Grid.Column="0" Style="{StaticResource StyleCheck}">Dado de Baja</CheckBox>
+                        <CheckBox x:Name="Iva4" Grid.Column="1" Style="{StaticResource StyleCheck}">IVA 4% Superreducido</CheckBox>
+                        <CheckBox x:Name="Iva10" Grid.Column="2" Style="{StaticResource StyleCheck}">IVA 10% Reducido</CheckBox>
+                        <CheckBox x:Name="Iva21" Grid.Column="3" Style="{StaticResource StyleCheck}">IVA 21% General</CheckBox>
+                        
+                        
+                    </Grid>
+                    <Border Grid.Row="1" BorderBrush="Black" BorderThickness="0,0,0,1">
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Grid.Column="0" x:Name="CodigoArticulo" Style="{StaticResource placeHolder}" Tag="Código Artículo"/>
+                            <TextBox Grid.Column="1" Style="{StaticResource placeHolder}" Tag="Nombre artículo"/>
+                            <TextBox Grid.Column="2" Style="{StaticResource placeHolder}" Tag="Última Modificación"/>
+                            <Button Grid.Column="3"  Click="SearchArticles" Margin="15,5">Buscar</Button>
 
-                        <Table CellSpacing="4">
 
-                            <Table.Columns>
-                                <TableColumn/>
-                                <TableColumn/>
-                                <TableColumn/>
-                                <TableColumn/>
-                            </Table.Columns>
-
-                            <TableRowGroup>
-
-                                <!-- Header row for the table. -->
-                                <TableRow Background="LightGoldenrodYellow">
-                                    <TableCell>
-                                        <Paragraph FontSize="14pt" FontWeight="Bold">Planet</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph FontSize="14pt" FontWeight="Bold">Mean Distance from Sun</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph FontSize="14pt" FontWeight="Bold">Mean Diameter</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph FontSize="14pt" FontWeight="Bold">Approximate Mass</Paragraph>
-                                    </TableCell>
-                                </TableRow>
-
-                                <!-- Sub-title row for the inner planets. -->
-                                <TableRow>
-                                    <TableCell ColumnSpan="4">
-                                        <Paragraph FontSize="14pt" FontWeight="Bold">The Inner Planets</Paragraph>
-                                    </TableCell>
-                                </TableRow>
-
-                                <!-- Four data rows for the inner planets. -->
-                                <TableRow>
-                                    <TableCell>
-                                        <Paragraph>Mercury</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>57,910,000 km</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>4,880 km</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>3.30e23 kg</Paragraph>
-                                    </TableCell>
-                                </TableRow>
-                                <TableRow Background="lightgray">
-                                    <TableCell>
-                                        <Paragraph>Venus</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>108,200,000 km</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>12,103.6 km</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>4.869e24 kg</Paragraph>
-                                    </TableCell>
-                                </TableRow>
-                                <TableRow>
-                                    <TableCell>
-                                        <Paragraph>Earth</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>149,600,000 km</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>12,756.3 km</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>5.972e24 kg</Paragraph>
-                                    </TableCell>
-                                </TableRow>
-                                <TableRow Background="lightgray">
-                                    <TableCell>
-                                        <Paragraph>Mars</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>227,940,000 km</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>6,794 km</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>6.4219e23 kg</Paragraph>
-                                    </TableCell>
-                                </TableRow>
-
-                                <!-- Sub-title row for the outter planets. -->
-                                <TableRow>
-                                    <TableCell ColumnSpan="4">
-                                        <Paragraph FontSize="14pt" FontWeight="Bold">The Major Outer Planets</Paragraph>
-                                    </TableCell>
-                                </TableRow>
-
-                                <!-- Four data rows for the major outter planets. -->
-                                <TableRow>
-                                    <TableCell>
-                                        <Paragraph>Jupiter</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>778,330,000 km</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>142,984 km</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>1.900e27 kg</Paragraph>
-                                    </TableCell>
-                                </TableRow>
-                                <TableRow Background="lightgray">
-                                    <TableCell>
-                                        <Paragraph>Saturn</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>1,429,400,000 km</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>120,536 km</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>5.68e26 kg</Paragraph>
-                                    </TableCell>
-                                </TableRow>
-                                <TableRow>
-                                    <TableCell>
-                                        <Paragraph>Uranus</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>2,870,990,000 km</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>51,118 km</Paragraph>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Paragraph>8.683e25 kg</Paragraph>
-                                    </TableCell>
-                                </TableRow>
-                                
-                              
-
-                            </TableRowGroup>
-                        </Table>
-                    </FlowDocument>
-                </FlowDocumentReader>
+                        </Grid>
+                    </Border>
+                    
+                </Grid>
+                <!--Listado de todos los articulos que hay-->
+                <DataGrid Name="listaArticulos" Grid.Row="1" Margin="0,10,0,10">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Nombre" Binding="{Binding name}" Width="*"/>
+                        <DataGridTextColumn Header="Código" Binding="{Binding code}" Width="*" />
+                        <DataGridTextColumn Header="Descripción" Binding="{Binding description}" Width="*"/>
+                        <DataGridTextColumn Header="Precio" Binding="{Binding price}" Width="*"/>
+                        <DataGridTextColumn Header="Ultima Modificación" Binding="{Binding lastModified}" Width="*"/>
+                        <DataGridTextColumn Header="Opciones" Binding="{Binding options}" Width="*"/>
+                    </DataGrid.Columns>
+                    <DataGrid.RowDetailsTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding name}" />
+                        </DataTemplate>
+                    </DataGrid.RowDetailsTemplate>
+                </DataGrid>
 
 
             </Grid>
@@ -214,12 +123,18 @@
         <Border BorderBrush="#314354" BorderThickness="0,0,2,0">
             <Grid Background="#647687" >
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="50"/>
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
+                <TextBox Grid.Row="1" Style="{StaticResource placeHolder}" Tag="Buscar"></TextBox>
+                <Button Grid.Row="2" Margin="10,0">Gestión de Articulos</Button>
+                <Button Grid.Row="3" Margin="10,0">Gestión de Dependientes</Button>
+                <Button Grid.Row="4" Margin="10,0">Gestión de Ventas</Button>
+                <Button x:Name="SignOut" Grid.Row="5" Margin="60,10,10,13"  VerticalAlignment="Bottom" Click="SignOut_Click" >Cerrar Sesión</Button>
             </Grid>
         </Border>
             

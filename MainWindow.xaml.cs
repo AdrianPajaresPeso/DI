@@ -26,15 +26,45 @@ namespace PrototipoVentas
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btn_listar(object sender, RoutedEventArgs e)
         {
-            aniadirOrListar = true;
-            MessageBox.Show("You clicked me at ");
+            if (!listadoArticulos.IsVisible) {
+                listadoArticulos.Visibility = System.Windows.Visibility.Visible;
+                AddArticulo.Visibility = System.Windows.Visibility.Collapsed;
+            }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void btn_aniadir(object sender, RoutedEventArgs e)
         {
+            if (!AddArticulo.IsVisible) {
+                listadoArticulos.Visibility = System.Windows.Visibility.Collapsed;
+                AddArticulo.Visibility = System.Windows.Visibility.Visible;
+            }
+        }
 
+        private void SearchArticles(object sender, RoutedEventArgs e)
+        {
+            
+            bool iva4, iva10, iva21, baja;
+            if (Iva4.IsChecked ?? true){
+                iva4 = true;
+                Console.WriteLine(iva4);
+            }
+            if (Iva10.IsChecked ?? true)
+            {
+                iva4 = true;
+                Console.WriteLine(iva10);
+            }
+            if (Iva21.IsChecked ?? true)
+            {
+                iva21 = true;
+                Console.WriteLine(iva21);
+            }
+        }
+
+        private void SignOut_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
