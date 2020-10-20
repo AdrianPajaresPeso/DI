@@ -18,6 +18,25 @@ namespace PrototipoVentas.Model
 
         #endregion
 
+        #region Constructors
+        public Articulo(string name, int code, string description, DateTime lastModified, Boolean isDown)
+        {
+            this.name = name;
+            this.code = code;
+            this.description = description;
+            this.lastModified = lastModified;
+            this.isDown = isDown;
+        }
+
+        public Articulo(string name, int code, string description, DateTime lastModified) {
+            this.name = name;
+            this.code = code;
+            this.description = description;
+            this.lastModified = lastModified;
+            isDown = true;
+        }
+        #endregion
+
         #region Getters Y setters
         public string Name {
             get {
@@ -72,6 +91,9 @@ namespace PrototipoVentas.Model
             }
         }
         #endregion
+
+
+
     }
 
 
