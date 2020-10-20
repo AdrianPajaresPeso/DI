@@ -55,7 +55,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="ViewModel\ArticuloViewModel.cs" />
+    <Compile Include="View\Dependiente\DependienteAdd.xaml.cs">
+      <DependentUpon>DependienteAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dependiente\DependienteMain.xaml.cs">
+      <DependentUpon>DependienteMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\VentasInfo.xaml.cs">
+      <DependentUpon>VentasInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ventas\VentasMain.xaml.cs">
+      <DependentUpon>VentasMain.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\Articulos\ArticuloMain.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -63,10 +76,26 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="View\Articulos\ArticuloMain.xaml.cs">
+      <DependentUpon>ArticuloMain.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Dependiente\DependienteAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Dependiente\DependienteMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Ventas\VentasInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Ventas\VentasMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Articulo.cs" />
@@ -97,9 +126,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

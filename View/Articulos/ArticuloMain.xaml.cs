@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrototipoVentas.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,12 +19,14 @@ namespace PrototipoVentas
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Page
     {
-        Boolean aniadirOrListar;
+        public object Depentiente { get; private set; }
+
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void btn_listar(object sender, RoutedEventArgs e)
@@ -52,7 +55,7 @@ namespace PrototipoVentas
             }
             if (Iva10.IsChecked ?? true)
             {
-                iva4 = true;
+                iva10 = true;
                 Console.WriteLine(iva10);
             }
             if (Iva21.IsChecked ?? true)
@@ -60,11 +63,15 @@ namespace PrototipoVentas
                 iva21 = true;
                 Console.WriteLine(iva21);
             }
+            if (bajaSearch.IsChecked ?? true) {
+                baja = true;
+                Console.WriteLine(baja);
+            }
+           
         }
 
-        private void SignOut_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
+        
+
+       
     }
 }

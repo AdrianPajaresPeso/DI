@@ -13,3 +13,8 @@ C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\Prototip
 C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\PrototipoVentas.csproj.GenerateResource.cache
 C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\PrototipoVentas.exe
 C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\PrototipoVentas.pdb
+C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\View\Articulos\ArticuloMain.g.cs
+C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\View\Dependiente\DependienteAdd.g.cs
+C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\View\Dependiente\DependienteMain.g.cs
+C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\View\Ventas\VentasInfo.g.cs
+C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\View\Ventas\VentasMain.g.cs
