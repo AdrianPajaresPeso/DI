@@ -9,18 +9,59 @@ using System.Windows.Input;
 
 namespace PrototipoVentas.ViewModel
 {
-    class ArticuloViewModel 
+    class ArticuloViewModel
     {
+        private IList<Articulo> _Articulos;
 
-        public ObservableCollection<Articulo> Articulos {
-            get;
-            set;
+        public ArticuloViewModel()
+        {
+            _Articulos = new List<Articulo>
+            {
+                //new User{UserId = 1,FirstName="Raj",LastName="Beniwal",City="Delhi",State="DEL",Country="INDIA"},
+                    
+            
+            };
         }
 
-        public void LoadArticulos() { 
-        ObservableCollection<Articulo> articulo = new ObservableCollection<Articulo>();
-            
-            Articulos = articulo;
+        public IList<Articulo> Users
+        {
+            get { return _Articulos; }
+            set { _Articulos = value; }
+        }
+
+        private ICommand mUpdater;
+        public ICommand UpdateCommand
+        {
+            get
+            {
+                if (mUpdater == null)
+                    mUpdater = new Updater();
+                return mUpdater;
+            }
+            set
+            {
+                mUpdater = value;
+            }
+        }
+
+        private class Updater : ICommand
+        {
+            #region ICommand Members  
+
+            public bool CanExecute(object parameter)
+            {
+                return true;
+            }
+
+            public event EventHandler CanExecuteChanged;
+
+            public void Execute(object parameter)
+            {
+
+            }
+
+            #endregion
+
         }
     }
-}
+    }

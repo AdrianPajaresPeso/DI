@@ -19,7 +19,7 @@ namespace PrototipoVentas
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Page
+    public partial class MainWindow : Window
     {
         public object Depentiente { get; private set; }
 
@@ -70,8 +70,12 @@ namespace PrototipoVentas
            
         }
 
+
         
 
-       
+        private void SignOut_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

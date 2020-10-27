@@ -2,12 +2,10 @@ C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\bin\Debug\Prototip
 C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\bin\Debug\PrototipoVentas.exe
 C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\bin\Debug\PrototipoVentas.pdb
 C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\PrototipoVentas.csprojAssemblyReference.cache
-C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\MainWindow.g.cs
 C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\App.g.cs
 C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\PrototipoVentas_MarkupCompile.cache
 C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\PrototipoVentas_MarkupCompile.lref
 C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\App.baml
-C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\MainWindow.baml
 C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\PrototipoVentas.g.resources
 C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\PrototipoVentas.Properties.Resources.resources
 C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\PrototipoVentas.csproj.GenerateResource.cache
@@ -18,3 +16,8 @@ C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\View\Dep
 C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\View\Dependiente\DependienteMain.g.cs
 C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\View\Ventas\VentasInfo.g.cs
 C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\View\Ventas\VentasMain.g.cs
+C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\View\Articulos\ArticuloMain.baml
+C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\View\Dependiente\DependienteAdd.baml
+C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\View\Dependiente\DependienteMain.baml
+C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\View\Ventas\VentasInfo.baml
+C:\Users\Usuario\source\repos\PrototipoVentas\PrototipoVentas\obj\Debug\View\Ventas\VentasMain.baml

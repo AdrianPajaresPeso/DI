@@ -86,7 +86,12 @@ namespace PrototipoVentas.Model
             }
             set
             {
-                if (isDown) { 
+                if (isDown)
+                {
+                    isDown = false;
+                }
+                else {
+                    isDown = true;
                 }
             }
         }
