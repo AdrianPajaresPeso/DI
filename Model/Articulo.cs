@@ -10,32 +10,14 @@ namespace PrototipoVentas.Model
     {
         #region Atrubutos
 
-        private string name;
+        private String name;
         private int code;
-        private string description;
-        private DateTime lastModified;
+        private String description;
+        private String lastModified;
         private Boolean isDown;
 
         #endregion
 
-        #region Constructors
-        public Articulo(string name, int code, string description, DateTime lastModified, Boolean isDown)
-        {
-            this.name = name;
-            this.code = code;
-            this.description = description;
-            this.lastModified = lastModified;
-            this.isDown = isDown;
-        }
-
-        public Articulo(string name, int code, string description, DateTime lastModified) {
-            this.name = name;
-            this.code = code;
-            this.description = description;
-            this.lastModified = lastModified;
-            isDown = true;
-        }
-        #endregion
 
         #region Getters Y setters
         public string Name {
@@ -67,7 +49,7 @@ namespace PrototipoVentas.Model
                 description = value;
             }
         }
-        public DateTime LastModified {
+        public String LastModified {
             get
             {
                 return lastModified;

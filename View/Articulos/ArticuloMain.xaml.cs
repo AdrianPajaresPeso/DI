@@ -28,7 +28,10 @@ namespace PrototipoVentas
             InitializeComponent();
             
         }
-
+        #region BTN
+        /**
+         * Permite ver el listado de los articulos
+         */
         private void btn_listar(object sender, RoutedEventArgs e)
         {
             if (!listadoArticulos.IsVisible) {
@@ -36,7 +39,9 @@ namespace PrototipoVentas
                 AddArticulo.Visibility = System.Windows.Visibility.Collapsed;
             }
         }
-
+        /**
+         *Permite ver la vista de añadir un articulo
+         */
         private void btn_aniadir(object sender, RoutedEventArgs e)
         {
             if (!AddArticulo.IsVisible) {
@@ -44,7 +49,15 @@ namespace PrototipoVentas
                 AddArticulo.Visibility = System.Windows.Visibility.Visible;
             }
         }
-
+        /**
+         * Cierra la ventana cuando se da click al boton de cerrar sesión
+         * 
+         */
+        private void SignOut_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
         private void SearchArticles(object sender, RoutedEventArgs e)
         {
             
@@ -73,9 +86,6 @@ namespace PrototipoVentas
 
         
 
-        private void SignOut_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
+        
     }
 }

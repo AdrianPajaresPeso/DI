@@ -1,25 +1,22 @@
 ﻿using PrototipoVentas.Model;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
-
 namespace PrototipoVentas.ViewModel
 {
     class ArticuloViewModel
     {
         private IList<Articulo> _Articulos;
-
+        private DateTime date = new DateTime();
+        
         public ArticuloViewModel()
         {
+
             _Articulos = new List<Articulo>
             {
                 //new User{UserId = 1,FirstName="Raj",LastName="Beniwal",City="Delhi",State="DEL",Country="INDIA"},
-                    
-            
+                 new Articulo{Name="hola", Code=1, Description="jaja",LastModified = "lask", IsDown = false },
+
             };
         }
 
